@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/fav_icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta name="author" content="Maja Wennerwald, Camilla Nørgaard & Jesper Krüger" />
+    <title>ASKA | Kalender</title>
+    <meta name="title" content="ASKA | Kalender" />
+    <meta
+      name="description"
+      content="ASKA islandsheste klub Aarhus Syd - få overblik over kommende arrangementer inden for stævner, foredrag, kursus, fællesture, klubdage og ungdom."
+    />
+    <meta
+      name="subject"
+      content="ASKA islandsheste klub Aarhus Syd - få overblik over kommende arrangementer inden for stævner, foredrag, kursus, fællesture, klubdage og ungdom."
+    />
+  </head>
+  <body>
+    <!-- ==================================== MAIN ==================================== -->
+    <main class="page-height">
+      <h1>ASKA islænderklub Århus syd for isheste og islændere</h1>
+      <div class="page-padding center">
+        <h2>Kalender</h2>
+      </div>
+      <div class="whitespace"></div>
+      <div class="filter-buttons">
+        <div class="checkbox-area5">
+          <label for="ASKA-Fællesture"
+            >ASKA Fællesture
+            <input
+              type="checkbox"
+              name="ASKA Fællesture"
+              value="ASKA Fællesture"
+              class="eventCheckBox"
+              id="ASKA-Fællesture"
+            />
+            <div class="checkbox_box"></div>
+          </label>
+        </div>
+        <div class="checkbox-area4">
+          <label for="Klubdage"
+            >Klubdage
+            <input type="checkbox" name="Klubdage" value="Klubdage" class="eventCheckBox" id="Klubdage" />
+            <div class="checkbox_box"></div>
+          </label>
+        </div>
+        <div class="checkbox-area1">
+          <label for="Stævner"
+            >Stævner
+            <input type="checkbox" name="Stævner" value="Stævner" class="eventCheckBox" id="Stævner" />
+            <div class="checkbox_box"></div>
+          </label>
+        </div>
+        <div class="checkbox-area3">
+          <label for="ASKA-Ungdom"
+            >ASKA Ungdom
+            <input type="checkbox" name="ASKA Ungdom" value="ASKA Ungdom" class="eventCheckBox" id="ASKA-Ungdom" />
+            <div class="checkbox_box"></div>
+          </label>
+        </div>
+        <div class="checkbox-area2">
+          <label for="Foredrag-og-kursus"
+            >Foredrag og kursus
+            <input
+              type="checkbox"
+              name="Foredrag og kursus"
+              value="Foredrag og kursus"
+              class="eventCheckBox"
+              id="Foredrag-og-kursus"
+            />
+            <div class="checkbox_box"></div>
+          </label>
+        </div>
+      </div>
+      <input class="search-bar" type="search" placeholder="Søg..." onkeyup="search(this.value)" />
+      <section class="calender">
+        <div id="calender-modal" class="modal modal-content">
+          <img class="calender-modal-logo" src="../images/logo_aska.svg" alt="aska logo" />
+
+          <div class="modal-text2 modal-text-p"></div>
+        </div>
+      </section>
+      <section id="content" class="event-grid-container"></section>
+    </main>
+    <!-- loader -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+    <script src="../js/main.js" type="module"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  </body>
+</html>

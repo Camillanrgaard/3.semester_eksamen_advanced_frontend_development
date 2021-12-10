@@ -1,0 +1,1572 @@
+/* ==================================== GENERAL ==================================== */
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Playfair+Display&display=swap");
+:root {
+  --primary-black: #000000;
+  --secondary-black: #222222;
+  --primary-white: #f0f0f0;
+  --secondary-dark-green: #464f41;
+  --primary-dark-green: #56776b;
+  --primary-green: #557e54;
+  --primary-green-opacity: #557e54b8;
+  --primary-light-green: #bfcba8;
+  --secondary-gray: rgba(232, 232, 232, 0.637);
+  --primary-gray: #707070;
+  --primary-gray-opacity: #707070b8;
+  --overlay: rgba(0, 0, 0, 0.541);
+  --shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  --primary-heading: "Playfair Display", serif;
+  --primary-text: "Abel", sans-serif;
+}
+.green {
+  color: var(--primary-white);
+  background-color: var(--primary-green);
+}
+.dark-green {
+  color: var(--primary-white);
+  background-color: var(--primary-dark-green);
+}
+.dark-green2 {
+  color: var(--primary-white);
+  background-color: var(--secondary-dark-green);
+}
+.light-green {
+  color: var(--primary-white);
+  background-color: var(--primary-light-green);
+}
+.white {
+  color: var(--primary-white);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  height: 100%;
+}
+main {
+  background-color: var(--primary-white);
+}
+.page-padding {
+  padding: 120px 20px 20px 20px;
+}
+.whitespace {
+  height: 25px;
+}
+.greenspace {
+  width: 100%;
+  height: 5px;
+  background-color: var(--primary-green);
+}
+/* ==================================== TEXT ==================================== */
+h1 {
+  display: none;
+}
+h2 {
+  font-family: var(--primary-heading);
+  font-size: 25px;
+}
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: 35px;
+  }
+}
+h3 {
+  font-family: var(--primary-heading);
+  font-size: 20px;
+  line-height: normal;
+}
+@media screen and (min-width: 600px) {
+  h3 {
+    font-size: 25px;
+  }
+}
+h4 {
+  font-size: 20px;
+  font-family: var(--primary-heading);
+}
+@media screen and (min-width: 600px) {
+  h4 {
+    font-size: 22px;
+  }
+}
+h5 {
+  font-size: 15px;
+  font-family: var(--primary-text);
+  line-height: 25px;
+}
+@media screen and (min-width: 600px) {
+  h5 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+h6 {
+  font-family: var(--primary-heading);
+  font-size: 12px;
+}
+p,
+ul,
+li {
+  font-family: var(--primary-text);
+  font-size: 15px;
+  margin: 0;
+  line-height: 25px;
+}
+@media screen and (min-width: 600px) {
+  p,
+  ul,
+  li {
+    font-size: 17px;
+  }
+}
+.ul-dots {
+  list-style: disc;
+  margin-left: 20px;
+}
+.ol-dots {
+  list-style: decimal;
+  margin-left: 20px;
+}
+a {
+  color: var(--primary-black) !important;
+  font-family: var(--primary-text);
+  text-decoration: none;
+  font-size: 15px;
+}
+@media screen and (min-width: 600px) {
+  a {
+    font-size: 17px;
+  }
+}
+/* ==================================== BUTTONS ==================================== */
+.button1 {
+  /* almindelige "runde" knapper */
+  border-radius: 20px;
+  width: 280px;
+  height: 45px;
+  font-family: var(--primary-heading);
+  font-size: 20px;
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .button1 {
+    border-radius: 20px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .button1:hover {
+    background-color: var(--primary-gray);
+  }
+}
+.button2 {
+  /* firkantede knapper */
+  width: 100%;
+  height: 170px;
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 992px) {
+  .button2 {
+    width: 100%;
+    height: 240px;
+    font-size: 24px;
+  }
+  .button2:hover {
+    background-color: var(--primary-gray);
+  }
+}
+.btn-text1 {
+  font-family: var(--primary-heading);
+  font-size: 50px;
+  line-height: 60px;
+}
+.btn-text2 {
+  font-family: var(--primary-heading);
+  font-size: 30px;
+}
+@media screen and (min-width: 992px) {
+  .btn-text1 {
+    font-size: 80px;
+  }
+  .btn-text2 {
+    font-size: 40px;
+  }
+}
+.button3 {
+  /* grid knapper */
+  width: 100%;
+  height: 50px;
+  font-family: var(--primary-heading);
+  border: none;
+  box-shadow: var(--shadow);
+  background-color: var(--primary-green-opacity);
+  color: var(--primary-white);
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .button3 {
+    width: 100%;
+    height: 40px;
+  }
+  .button3:hover {
+    background-color: var(--primary-gray-opacity);
+  }
+}
+.button4 {
+  /* kalender knapper */
+  border-radius: 20px;
+  width: 230px;
+  height: 45px;
+  font-family: var(--primary-heading);
+  font-size: 20px;
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .button4 {
+    border-radius: 20px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .button4:hover {
+    background-color: var(--primary-gray);
+  }
+}
+.button5 {
+  /* footer-knap */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+/* ==================================== SCROLLBAR ==================================== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}
+/* ========================== ASKA LOGO LOADER =============================== */
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  overflow: hidden;
+  background: var(--overlay);
+  text-align: center;
+}
+.spinner {
+  background-image: url(../images/fav_icon.svg);
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: fade 1s infinite;
+  animation: fade 1s infinite;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* ==================================== MENU NAV ==================================== */
+.burger {
+  width: 40px;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .burger {
+    display: none;
+  }
+}
+.line {
+  background-color: var(--secondary-black);
+  height: 3px;
+  width: 40px;
+  border-radius: 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.line2 {
+  margin: 10px 0 10px 0;
+}
+.open .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 10px);
+  transform: rotate(-45deg) translate(-9px, 10px);
+  background-color: var(--secondary-black);
+}
+.open .line2 {
+  opacity: 0;
+  background-color: var(--secondary-black);
+}
+.open .line3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -9px);
+  transform: rotate(45deg) translate(-9px, -9px);
+  background-color: var(--secondary-black);
+}
+header {
+  background-color: var(--primary-white);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 73px;
+  z-index: 999;
+  border-bottom: 6px solid var(--primary-green);
+}
+.logo {
+  margin: 5px;
+  width: 175px;
+  height: 100px;
+  position: absolute;
+  z-index: 3;
+}
+@media screen and (min-width: 992px) {
+  .logo {
+    margin: 10px;
+    width: 175px;
+  }
+}
+.nav-list {
+  display: none;
+  text-align: center;
+  background: var(--primary-white);
+  padding: 100px 0 0 0;
+  height: 500px;
+  box-shadow: var(--shadow);
+}
+@media screen and (min-width: 992px) {
+  header {
+    display: flex;
+    border-bottom: 5px solid var(--primary-green);
+  }
+  header > a {
+    width: 175px;
+  }
+  nav {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  .nav-list {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+  }
+  .nav-list:last-child {
+    margin: 0 20px 0 0;
+  }
+}
+.nav-list a:hover {
+  text-decoration: underline;
+}
+.nav-link {
+  font-family: var(--primary-heading);
+  font-size: 1.4em;
+  margin: 0 15px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--primary-green);
+}
+@media screen and (min-width: 992px) {
+  .nav-link {
+    border: none;
+  }
+}
+.menu-open {
+  display: block;
+}
+/* ==================================== HERO INDEX PAGE ==================================== */
+.frontpage-hero {
+  background-position: top;
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn linear 1s;
+  box-shadow: var(--shadow);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 600px) {
+  .frontpage-hero {
+    height: 100vh;
+  }
+}
+.hero1 {
+  background-image: url(../images/hero1_optimized.jpg);
+}
+.hero2 {
+  background-image: url(../images/dias2_optimized.png);
+}
+.hero3 {
+  background-image: url(../images/img_0805_optimized.png);
+}
+.hero-wrapper {
+  position: relative;
+  height: 90vh;
+}
+@media screen and (min-width: 600px) {
+  .hero-wrapper {
+    height: 75vh;
+  }
+}
+.hero-text {
+  transition: 4s ease-in-out content;
+  width: 95%;
+  margin: 0 auto 20px auto;
+  text-shadow: var(--primary-black) 1px 0 10px;
+}
+@media screen and (min-width: 600px) {
+  .hero-text {
+    width: 65%;
+  }
+}
+.hero-section {
+  height: 90vh;
+}
+.background_filter_hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* ==================================== HERO BUTTON SECTION INDEX PAGE ==================================== */
+.button-section a {
+  text-decoration: none;
+}
+.button-section {
+  display: grid;
+  grid-template-columns: repeat(3, 40vw);
+  overflow: scroll;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  height: 210px;
+  margin-top: -60px;
+}
+@media screen and (min-width: 600px) {
+  .button-section {
+    grid-template-columns: repeat(3, 20vw);
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    height: 275px;
+    text-align: center;
+    margin-top: 120px;
+  }
+}
+.button-section::-webkit-scrollbar {
+  display: none;
+}
+/* ==================================== MEDLEMSFORDELE SECTION INDEX PAGE ==================================== */
+.medlemsfordele {
+  text-align: center;
+}
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px 0px;
+  text-align: center;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ostanlaegget teigar-rideudstyr"
+    "klubdage staevner"
+    "pet-house saxild";
+}
+@media screen and (min-width: 600px) {
+  .container2 {
+    width: 80%;
+    margin: auto;
+    height: 60vh;
+    grid-template-columns: 1.1fr 0.9fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+      "ostanlaegget pet-house teigar-rideudstyr teigar-rideudstyr"
+      "ostanlaegget saxild saxild klubdage"
+      "ostanlaegget staevner staevner klubdage"
+      "ostanlaegget staevner staevner klubdage";
+  }
+}
+.grid-img {
+  position: relative;
+  background-position: center;
+  height: 160px;
+  width: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (min-width: 600px) {
+  .grid-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.grid-overlay {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: grayscale(20);
+}
+.container2 button {
+  z-index: 4;
+  transition: all 0.8s ease-in-out;
+}
+@media screen and (min-width: 992px) {
+  .container2 button:hover {
+    height: 100%;
+  }
+}
+.ostanlaegget {
+  grid-area: ostanlaegget;
+  overflow: hidden;
+  background-image: url(../images/ridekort-til-osteranlaegget_optimized.jpg);
+}
+.teigar-rideudstyr {
+  grid-area: teigar-rideudstyr;
+  overflow: hidden;
+  background-image: url(../images/teigar_optimized.png);
+}
+.klubdage {
+  grid-area: klubdage;
+  overflow: hidden;
+  background-image: url(../images/gratis-benyttelse-af-faciliteter_optimized.jpg);
+}
+.staevner {
+  grid-area: staevner;
+  overflow: hidden;
+  background-image: url(../images/om-aska-staevner_optimized.jpg);
+}
+.pet-house {
+  grid-area: pet-house;
+  overflow: hidden;
+  background-image: url(../images/pethouse_optimized.png);
+}
+.saxild {
+  grid-area: saxild;
+  overflow: hidden;
+  background-image: url(../images//saxild_naturfoder_optimized.png);
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal-text {
+  width: 90%;
+  height: 400px;
+  background-color: var(--primary-green);
+  margin: 50% auto;
+  color: var(--primary-white);
+  padding-bottom: 15px;
+  box-shadow: var(--shadow);
+}
+@media screen and (min-width: 600px) {
+  .modal-text {
+    margin: 12% auto;
+    width: 70%;
+    height: 510px;
+  }
+}
+.modal-text-p {
+  overflow-y: scroll;
+  height: 300px;
+}
+@media screen and (min-width: 600px) {
+  .modal-text-p {
+    height: 400px;
+  }
+}
+.modal span {
+  font-size: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.modal span:hover {
+  color: var(--secondary-gray);
+}
+.modal h3 {
+  margin-top: 0;
+}
+.line4 {
+  width: 70%;
+  height: 2px;
+  background-color: var(--primary-white);
+  margin: 10px auto;
+}
+@media screen and (min-width: 600px) {
+  .line4 {
+    width: 40%;
+    margin: 25px auto;
+  }
+}
+.flex2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media screen and (min-width: 600px) {
+  .flex2 {
+    gap: 10px;
+  }
+}
+.modal-content {
+  padding: 0 20px;
+}
+/* ==================================== HURTIG LINKS SECTION INDEX PAGE ==================================== */
+.hurtiglinks {
+  text-align: center;
+}
+.button-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+@media screen and (min-width: 992px) {
+  .button-section2 {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+}
+/* ==================================== VILHELMSBORG SECTION INDEX PAGE ==================================== */
+.vilhelmsborg {
+  background-color: white;
+}
+.vilhelmsborg_flex {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 150px 150px 150px 150px;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 600px) {
+  .vilhelmsborg_flex {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .vilhelmsborg_flex {
+    width: 80%;
+  }
+}
+.vilhelmsborg_map {
+  grid-column: 1;
+  grid-row: 1/5;
+  background-image: url("../images/map.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 600px) {
+  .vilhelmsborg_map {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+.vilhelmsborg-text {
+  text-align: center;
+  width: 90%;
+  padding: 10px;
+  margin: 40px auto 40px auto;
+  box-shadow: var(--shadow);
+  background-color: var(--secondary-gray);
+  grid-column: 1;
+  grid-row: 3/5;
+}
+@media screen and (min-width: 600px) {
+  .vilhelmsborg-text {
+    padding: 30px;
+    box-shadow: none;
+    background-color: transparent;
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+.vb-logo {
+  width: 300px;
+  padding: 15px;
+}
+@media screen and (min-width: 600px) {
+  .vb-logo {
+    width: 350px;
+    padding: 15px 0;
+  }
+}
+/* ==================================== SPONSOR SLIDE SECTION INDEX PAGE ==================================== */
+.sponsorer {
+  padding: 25px;
+  text-align: center;
+  background-color: white;
+}
+.sponsor_logo img {
+  width: 100px !important;
+  filter: grayscale(1);
+  margin: 0 10px;
+}
+.sponsor_flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  animation-name: sponsor;
+  animation-duration: 10s;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+.sponsor_logo_container {
+  width: 100%;
+  overflow: hidden;
+}
+.glide__slides {
+  align-items: center;
+}
+.glide__slides img {
+  width: 100px;
+  filter: grayscale(50);
+}
+.glide__slides img:hover {
+  filter: grayscale(0);
+}
+@keyframes sponsor {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ==================================== SoMe SECTION INDEX PAGE ==================================== */
+.some-section {
+  background-image: url(../images/some-background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.some_flex {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  .some_flex {
+    flex-direction: row;
+  }
+}
+.background_filter {
+  backdrop-filter: blur(2px) grayscale(0.8);
+}
+.background_filter_hero {
+  backdrop-filter: blur(0) grayscale(0.8);
+}
+.instagram_widget_grid,
+.facebook_widget_grid {
+  box-shadow: var(--shadow);
+  border: 4px solid rgb(85, 126, 84, 0.1);
+  background-color: var(--primary-green-opacity);
+  display: block;
+  margin: 50px auto;
+  height: 400px;
+}
+@media screen and (min-width: 992px) {
+  .instagram_widget_grid:hover {
+    background-color: var(--primary-gray-opacity);
+    border: 4px solid rgb(112, 112, 112), 0.1;
+  }
+  .facebook_widget_grid:hover {
+    background-color: var(--primary-gray-opacity);
+    border: 4px solid rgb(112, 112, 112), 0.1;
+  }
+}
+.widget_text {
+  text-align: center;
+  width: 280px;
+  padding: 10px;
+  color: var(--primary-white);
+}
+/* ==================================== EVENT CALENDAR PAGE ==================================== */
+.page-height {
+  min-height: 80vh;
+}
+.center {
+  text-align: center;
+}
+.event-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1em;
+  gap: 1em;
+}
+@media (min-width: 600px) {
+  .event-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .event-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.event-grid-container > article {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  animation: fadeIn 0.4s;
+  box-shadow: var(--shadow);
+  min-width: 250px;
+}
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 170px;
+  margin-left: 20px;
+}
+@media screen and (min-width: 600px) {
+  .filter-buttons {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40px;
+  }
+}
+.filter-buttons > div > label {
+  font-family: var(--primary-text);
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.eventCheckBox {
+  display: none;
+}
+.checkbox_box {
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  margin: 0 5px 0 0;
+  border: 3px solid var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+  border-radius: 8px;
+}
+.checkbox_box::after {
+  color: white;
+}
+.eventCheckBox:checked + .checkbox_box {
+  background: var(--primary-green);
+}
+.search-bar {
+  width: 345px;
+  height: 25px;
+  display: block;
+  margin: 20px auto 0 auto;
+  font-family: var(--primary-text);
+  border: 3px solid var(--primary-green);
+  box-shadow: var(--shadow);
+  border-radius: 25px;
+  padding: 20px;
+}
+@media screen and (min-width: 600px) {
+  .search-bar {
+    margin: 20px auto 40px auto;
+  }
+}
+#calender-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.calender-modal-logo {
+  width: 150px;
+  position: relative;
+  position: relative;
+  top: 13%;
+  display: block;
+  z-index: 5342;
+  margin: 0 auto;
+  grid-area: calender-modal-logo;
+}
+@media screen and (min-width: 600px) {
+  .calender-modal-logo {
+    width: 200px;
+    top: 4%;
+  }
+}
+.line5 {
+  width: 30%;
+  height: 2px;
+  background-color: var(--primary-green);
+  margin: 10px 0;
+}
+@media screen and (min-width: 600px) {
+  .line5 {
+    width: 40%;
+  }
+}
+/* ==================================== PAGES GRID + GENERAL ==================================== */
+.section-button {
+  margin: 10px auto 0 auto;
+  width: 240px;
+  display: block;
+}
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 0 15px;
+  margin: 0 auto;
+  gap: 30px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a b"
+    "c d"
+    "e f"
+    "g g";
+}
+@media (min-width: 600px) {
+  .container3 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 1050px;
+    height: 60vh;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "a b c c"
+      "a d d e"
+      "a f f e"
+      "a f f e"
+      "g g g g";
+  }
+}
+.a,
+.b,
+.c,
+.d,
+.e,
+.f {
+  width: 95%;
+}
+.a,
+.c,
+.e {
+  margin-right: 5%;
+}
+.b,
+.d,
+.f {
+  margin-left: 5%;
+}
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
+}
+.e {
+  grid-area: e;
+}
+.f {
+  grid-area: f;
+}
+.g {
+  grid-area: g;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .a,
+  .b,
+  .c,
+  .d,
+  .e,
+  .f {
+    width: 100%;
+    margin: 0;
+  }
+}
+.modal-text3,
+.modal-text2 {
+  width: 85%;
+  min-height: 508px;
+  background-color: var(--primary-white);
+  margin: 0 auto;
+  color: var(--primary-black);
+  border-radius: 20px;
+  border: 5px solid var(--primary-green);
+  grid-row: 2/3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  box-shadow: var(--shadow);
+}
+@media screen and (min-width: 992px) {
+  .modal-text3,
+  .modal-text2 {
+    width: 65%;
+    height: auto;
+    min-height: 615px;
+  }
+}
+.modal-img {
+  height: 100px;
+  background-size: cover;
+  border-radius: 0 0 13px 13px;
+}
+/* ==================================== OM ASKA PAGE ==================================== */
+.om-aska .a {
+  background-image: url(../images/aska-udvalg_optimized.jpg);
+  background-position: right;
+}
+.om-aska .b {
+  background-image: url(../images/logo_aska.svg);
+}
+.om-aska .c {
+  background-image: url(../images/hero1_optimized.jpg);
+}
+.om-aska .d {
+  background-image: url(../images/aska-vedtaegter_optimized.jpg);
+  background-position-y: 70%;
+}
+.om-aska .e {
+  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+}
+.om-aska .f {
+  background-image: url(../images/aska-værdier_optimized.jpg);
+  background-position-y: 30%;
+}
+.om-aska .g {
+  background-image: url(../images/kontakt_optimized.jpg);
+}
+#calender-modal2 .modal-img {
+  mask-image: url(../images/aska-udvalg_optimized.jpg);
+  background-image: url(../images/aska-udvalg_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 65%;
+}
+#calender-modal3 .modal-img {
+  mask-image: url(../images/logo_aska.svg);
+  background-image: url(../images/logo_aska.svg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 45%;
+}
+#calender-modal4 .modal-img {
+  mask-image: url(../images/hero1_optimized.jpg);
+  background-image: url(../images/hero1_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 35%;
+}
+#calender-modal5 .modal-img {
+  mask-image: url(../images/aska-vedtaegter_optimized.jpg);
+  background-image: url(../images/aska-vedtaegter_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 75%;
+}
+#calender-modal6 .modal-img {
+  mask-image: url(../images/bliv-staldambassador_optimized.jpg);
+  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 55%;
+}
+#calender-modal7 .modal-img {
+  mask-image: url(../images/aska-værdier_optimized.jpg);
+  background-image: url(../images/aska-værdier_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 30%;
+}
+#calender-modal8 .modal-img {
+  mask-image: url(../images/kontakt_optimized.jpg);
+  background-image: url(../images/kontakt_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 65%;
+}
+.bestyrelse-img {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .bestyrelse-img {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bestyrelse-grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "bestyrelses-grid-one bestyrelses-grid-two";
+  }
+  .bestyrelse-grid-one {
+    grid-area: bestyrelses-grid-one;
+  }
+  .bestyrelse-grid-two {
+    grid-area: bestyrelses-grid-two;
+  }
+}
+/* ==================================== BLIV EN DEL AF ASKA PAGE ==================================== */
+.bliv-en-del-af-aska .a {
+  background-image: url(../images/bliv-medlem_optimized.jpg);
+}
+.bliv-en-del-af-aska .b {
+  background-image: url(../images/aska-medlemmer_optimized.jpg);
+}
+.bliv-en-del-af-aska .c {
+  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+}
+.bliv-en-del-af-aska .d {
+  background-image: url(../images/tilmeld-nyhedsbrev_optimized.jpg);
+}
+.bliv-en-del-af-aska .e {
+  background-image: url(../images/bliv-frivillig_optimized.jpg);
+}
+.bliv-en-del-af-aska .f {
+  background-image: url(../images/bliv-sponsor_optimized.jpg);
+}
+.bliv-en-del-af-aska .g {
+  background-image: url(../images/webshop_optimized.jpg);
+  background-position-y: 39%;
+}
+#calender-modal9 .modal-img {
+  mask-image: url(../images/bliv-medlem_optimized.jpg);
+  background-image: url(../images/bliv-medlem_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 20%;
+}
+#calender-modal10 .modal-img {
+  mask-image: url(../images/aska-medlemmer_optimized.jpg);
+  background-image: url(../images/aska-medlemmer_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 50%;
+}
+#calender-modal11 .modal-img {
+  mask-image: url(../images/bliv-staldambassador_optimized.jpg);
+  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 50%;
+}
+#calender-modal12 .modal-img {
+  mask-image: url(../images/tilmeld-nyhedsbrev_optimized.jpg);
+  background-image: url(../images/tilmeld-nyhedsbrev_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 60%;
+}
+#calender-modal13 .modal-img {
+  mask-image: url(../images/bliv-frivillig_optimized.jpg);
+  background-image: url(../images/bliv-frivillig_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 55%;
+}
+#calender-modal14 .modal-img {
+  mask-image: url(../images/bliv-sponsor_optimized.jpg);
+  background-image: url(../images/bliv-sponsor_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 58%;
+}
+/* ==================================== ASKA STAEVNER PAGE ==================================== */
+.aska-staevner .a {
+  background-image: url(../images/om-aska-staevner_optimized.jpg);
+}
+.aska-staevner .b {
+  background-image: url(../images/kontakt_staevneudvalg_optimized.jpg);
+}
+.aska-staevner .c {
+  background-image: url(../images/);
+}
+@media screen and (min-width: 600px) {
+  .aska-staevner .c {
+    height: 130px;
+  }
+}
+.aska-staevner .d {
+  background-image: url(../images/staevneudvalg_optimized.jpg);
+}
+.aska-staevner .e {
+  background-image: url(../images/sponsorer_optimized.jpg);
+}
+.aska-staevner .f {
+  background-image: url(../images/kalender-og-tilmelding_optimized.jpg);
+}
+.aska-staevner .g {
+  background-image: url(../images/webshop_optimized.jpg);
+  background-position-y: 39%;
+}
+#calender-modal16 .modal-img {
+  mask-image: url(../images/om-aska-staevner_optimized.jpg);
+  background-image: url(../images/om-aska-staevner_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 16%;
+}
+#calender-modal17 .modal-img {
+  mask-image: url(../images/kontakt_staevneudvalg_optimized.jpg);
+  background-image: url(../images/kontakt_staevneudvalg_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 49%;
+}
+#calender-modal18 .modal-img {
+  mask-image: url(../images/);
+  background-image: url(../images);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 16%;
+}
+#calender-modal19 .modal-img {
+  mask-image: url(../images/staevneudvalg_optimized.jpg);
+  background-image: url(../images/staevneudvalg_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 22%;
+}
+.fb-page-widget {
+  height: 100%;
+  width: 100%;
+}
+.mobile-widget {
+  display: block;
+}
+.desktop-widget {
+  display: none;
+}
+@media (min-width: 600px) {
+  .mobile-widget {
+    display: none;
+  }
+  .desktop-widget {
+    display: block;
+  }
+}
+/* ==================================== ASKA UNGDOM PAGE ==================================== */
+.aska-ungdom .a {
+  background-image: url(../images/bliv-medlem_optimized.jpg);
+}
+.aska-ungdom .b {
+  background-image: url(../images/til-foraeldre_optimized.jpg);
+}
+.aska-ungdom .c {
+  background-image: url(../images/om-aska-ungdom_optimized.jpg);
+}
+.aska-ungdom .d {
+  background-image: url(../images/undervisning-og-laering_optimized.jpg);
+}
+.aska-ungdom .e {
+  background-image: url(../images/faellesskab_optimized.jpg);
+}
+.aska-ungdom .f {
+  background-image: url(../images/junior-og-ungdomsudvalg_optimized.jpg);
+}
+.aska-ungdom .g {
+  background-image: url(../images/webshop_optimized.jpg);
+}
+#calender-modal23 .modal-img {
+  mask-image: url(../images/bliv-medlem_optimized.jpg);
+  background-image: url(../images/bliv-medlem_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 20%;
+}
+#calender-modal24 .modal-img {
+  mask-image: url(../images/til-foraeldre_optimized.jpg);
+  background-image: url(../images/til-foraeldre_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 53%;
+}
+#calender-modal25 .modal-img {
+  mask-image: url(../images/om-aska-ungdom_optimized.jpg);
+  background-image: url(../images/om-aska-ungdom_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 43%;
+}
+#calender-modal26 .modal-img {
+  mask-image: url(../images/undervisning-og-laering_optimized.jpg);
+  background-image: url(../images/undervisning-og-laering_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 43%;
+}
+#calender-modal27 .modal-img {
+  mask-image: url(../images/faellesskab_optimized.jpg);
+  background-image: url(../images/faellesskab_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 33%;
+}
+#calender-modal28 .modal-img {
+  mask-image: url(../images/junior-og-ungdomsudvalg_optimized.jpg);
+  background-image: url(../images/junior-og-ungdomsudvalg_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 48%;
+}
+/* ==================================== ASKA TURE PAGE ==================================== */
+.aska-ture {
+  height: 80vh;
+}
+.ture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  padding: 0 15px;
+  grid-template-areas: "ture-grid-one ture-grid-two";
+}
+.ture-grid-one,
+.foredrag-grid-one {
+  grid-area: ture-grid-one;
+  width: 95%;
+  margin-right: 5%;
+}
+.ture-grid-one {
+  background-image: url(../images/20210919_132804_optimized.jpg);
+}
+.ture-grid-two,
+.foredrag-grid-two {
+  grid-area: ture-grid-two;
+  width: 95%;
+  margin-left: 5%;
+}
+.ture-grid-two {
+  background-image: url(../images/20190422_194258_optimized.jpg);
+}
+#calender-modal30 .modal-img {
+  mask-image: url(../images/20210919_132804_optimized.jpg);
+  background-image: url(../images/20210919_132804_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 53%;
+}
+#calender-modal31 .modal-img {
+  mask-image: url(../images/20190422_194258_optimized.jpg);
+  background-image: url(../images/20190422_194258_optimized.jpg);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 46%;
+}
+@media (min-width: 600px) {
+  .ture-grid {
+    height: 275px;
+    max-width: 1050px;
+  }
+  .ture-grid-one {
+    margin: 0;
+  }
+  .ture-grid-two {
+    margin: 0;
+  }
+}
+/* ==================================== ASKA FOREFRAG OG KURSUS PAGE ==================================== */
+.foredrag-grid-one {
+  background-image: url(../images/kursus.png);
+  background-position-y: 70%;
+}
+.foredrag-grid-two {
+  background-image: url(../images/foredrag.png);
+  background-position-y: 40%;
+}
+#calender-modal32 .modal-img {
+  mask-image: url(../images/kursus.png);
+  background-image: url(../images/kursus.png);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 58%;
+}
+#calender-modal33 .modal-img {
+  mask-image: url(../images/foredrag.png);
+  background-image: url(../images/foredrag.png);
+  -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-position-y: 35%;
+}
+/* ==================================== FOOTER ==================================== */
+footer {
+  background-color: var(--primary-white);
+  padding: 0 20px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 24px;
+}
+@media screen and (min-width: 600px) {
+  .flex {
+    flex-direction: row;
+    align-items: flex-start;
+    line-height: 34px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+}
+.flex_content {
+  width: 300px;
+  text-align: center;
+  margin: 20px auto;
+}
+.some-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 15px auto 0 auto;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .some-icons {
+    gap: 20px;
+  }
+}
+.iconify {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 600px) {
+  .iconify {
+    width: 45px;
+    height: 45px;
+  }
+}
+.copyright {
+  text-align: center;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .text_right_desktop {
+    text-align: right;
+  }
+  .text_left_desktop {
+    text-align: left;
+  }
+}
+/* ==================================== ADMIN LOGIN ==================================== */
+.modal-footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  text-align: center;
+}
+.modal-text-footer {
+  background-color: var(--primary-gray);
+  height: auto;
+  width: 80%;
+  color: var(--primary-white);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--shadow);
+}
+.modal-footer span {
+  font-size: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
