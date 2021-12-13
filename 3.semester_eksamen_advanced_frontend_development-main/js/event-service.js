@@ -13,8 +13,10 @@ import {
 
 export default class Event {
   constructor() {
-    this.eventRef = collection(_db, "events");
-    this.readData();
+    if (location.pathname.includes("kalender.html")) {
+      this.eventRef = collection(_db, "events");
+      this.readData();
+    }
   }
 
   readData() {

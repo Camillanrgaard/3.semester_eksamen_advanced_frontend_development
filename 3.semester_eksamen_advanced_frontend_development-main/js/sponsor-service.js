@@ -11,27 +11,30 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
 
 let _selectedImgFile = "";
-
+let _selectedSponsorId = "";
 import Glide from "https://cdn.skypack.dev/@glidejs/glide";
 
 export default class Sponsor {
   constructor() {
-    this.sponsorRef = collection(_db, "sponsors");
-    this.readData();
+    if (location.pathname.includes("index.html" || "admin.html")) {
+      this.sponsorRef = collection(_db, "sponsors");
+      this.readData();
+    }
   }
 
   readData() {
     // ========== READ ==========
     // watch the database ref for changes
     onSnapshot(this.sponsorRef, (snapshot) => {
-      // mapping snapshot data from firebase in to user objects
+      // mapping snapshot data from firebase in to sponsor objects
       this.sponsors = snapshot.docs.map((doc) => {
         const sponsor = doc.data();
         sponsor.id = doc.id;
         return sponsor;
       });
-      //this.appendSponsors(this.sponsors);
       initSlider(this.sponsors);
+      append_edit_sponsors(this.sponsors);
+      console.log(this.sponsors);
     });
   }
 
@@ -71,10 +74,17 @@ export default class Sponsor {
 
   updateSponsor(id, image) {
     const sponsorToUpdate = {
-      image: image,
+      img: document.querySelector("#imagePreviewUpdate").src,
     };
     const sponsorRef = doc(this.sponsorRef, id);
     updateDoc(sponsorRef, sponsorToUpdate);
+  }
+
+  selectSponsor(id) {
+    _selectedSponsorId = id;
+    const user = this.sponsors((sponsor) => sponsor.id == _selectedSponsorId);
+    // references to the input fields
+    document.querySelector("#imagePreviewUpdate").src = user.img;
   }
 
   deleteSponsor(id) {
@@ -92,7 +102,9 @@ function initSlider(sponsors) {
 		</li>
     `;
   }
-  document.querySelector("#sponsor-slider").innerHTML = htmlTemplate;
+  if (document.querySelector("#sponsor-slider")) {
+    document.querySelector("#sponsor-slider").innerHTML = htmlTemplate;
+  }
 
   new Glide(".glide", {
     type: "carousel",
@@ -110,3 +122,26 @@ function initSlider(sponsors) {
     },
   }).mount();
 }
+
+export let append_edit_sponsors = (sponsors) => {
+  let htmlTemplate = "";
+  for (const sponsor of sponsors) {
+    htmlTemplate += /*html*/ `
+		<article class="sponsor_editable">
+    <img src="${sponsor.img}">
+    <button class="btn-update-sponsor" data-id="${sponsor.id}">Update</button>
+    <button class="btn-delete-sponsor" data-id="${sponsor.id}">Delete</button>
+		</article>
+    `;
+  }
+  document.querySelector("#sponsor_edit").innerHTML = htmlTemplate;
+
+  //attach events to update and delete btns
+  document.querySelectorAll(".btn-update-sponsor").forEach((btn) => {
+    btn.onclick = () => selectUser(btn.getAttribute("data-id"));
+  });
+
+  document.querySelectorAll(".btn-delete-sponsor").forEach((btn) => {
+    btn.onclick = () => deleteUser(btn.getAttribute("data-id"));
+  });
+};

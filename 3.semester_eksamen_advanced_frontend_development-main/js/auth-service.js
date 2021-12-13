@@ -2,8 +2,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase
 import {
   getAuth,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
+  setPersistence,
+  browserSessionPersistence,
   signOut,
+  onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 import { firebaseConfig } from "./firebase-service.js";
 
@@ -12,15 +14,12 @@ const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // User is signed in
-    const uid = user.uid;
   } else {
     // User is signed out
-    // ...
   }
 });
 
-export const login = () => {
+export const login = async () => {
   const loginEmail = document.querySelector("#loginEmail").value;
   const loginPassword = document.querySelector("#loginPassword").value;
 
@@ -29,28 +28,29 @@ export const login = () => {
       const user = userCredential.user;
       console.log(user);
       document.querySelector(".login-message").innerHTML = "";
-      // ...
     })
     .catch((error) => {
       console.log(error);
-      document.querySelector(".login-message").innerHTML = error.message;
+      document.querySelector(".login-message").innerHTML = "Invalid email or password";
     });
 };
 
-const logout = () => {
+setPersistence(auth, browserSessionPersistence)
+  .then(() => {
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
+    firebase.auth().setPersistence.SESSION;
+    // New sign-in will be persisted with session persistence.
+    return signInWithEmailAndPassword(auth, email, password);
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+
+export const logout = () => {
   signOut(auth);
   console.log("Logged out...");
 };
-
-function appendAdminFunction() {
-  let htmlTemplate = "";
-  htmlTemplate = /*html*/ `
-        <form id="sponsorForm">
-        <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')" />
-        <img id="imagePreview" class="image-preview" />
-        <button type="button" name="button" id="btn-create">Tilføj sponsor</button>
-      </form>
-    `;
-
-  document.querySelector(".loggedinSponsor").innerHTML = htmlTemplate;
-}

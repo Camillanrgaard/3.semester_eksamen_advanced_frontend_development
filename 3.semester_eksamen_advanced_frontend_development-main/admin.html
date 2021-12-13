@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/fav_icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="author" content="Maja Wennerwald, Camilla Nørgaard & Jesper Krüger" />
+    <title>ASKA | Admin</title>
+    <meta name="title" content="ASKA | Admin" />
+    <meta
+      name="description"
+      content="ASKA islandsheste klub Aarhus Syd - del din passion for islandske heste med andre, opnå medlemsfordele og deltag i klubdage."
+    />
+    <meta
+      name="subject"
+      content="ASKA islandsheste klub Aarhus Syd - del din passion for islandske heste med andre, opnå medlemsfordele og deltag i klubdage."
+    />
+    <!-- sponsor-slide -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css"
+      integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="page-height">
+      <div class="page-padding center">
+        <div class="flex3">
+          <h2>Rediger</h2>
+          <div class="whitespace"></div>
+          <span class="iconify" data-icon="icon-park-outline:logout"></span>
+        </div>
+        <div class="whitespace"></div>
+        <div class="whitespace"></div>
+        <h3>Sponsorer</h3>
+        <section id="sponsor_edit"></section>
+        <div class="whitespace"></div>
+        <form id="sponsorForm">
+          <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')" />
+          <img id="imagePreview" class="image-preview" />
+          <button type="button" name="button" id="btn-create">Tilføj sponsor</button>
+        </form>
+        <div class="whitespace"></div>
+        <div class="whitespace"></div>
+        <form id="form-update">
+          <h3>Opdatér sponsor</h3>
+
+          <div class="whitespace"></div>
+          <input
+            type="file"
+            id="img-update"
+            accept="image/*"
+            onchange="previewImage(this.files[0], 'imagePreviewUpdate')"
+          />
+          <img id="imagePreviewUpdate" class="image-preview" />
+          <button type="button" name="button" id="btn-update">Opdatér sponsor</button>
+        </form>
+        <div class="whitespace"></div>
+        <div class="whitespace"></div>
+        <h3>Kalender</h3>
+      </div>
+    </main>
+    <div class="greenspace"></div>
+    <script src="js/main.js" type="module"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  </body>
+</html>

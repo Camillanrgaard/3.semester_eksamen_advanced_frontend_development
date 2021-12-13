@@ -275,7 +275,7 @@ a {
   text-align: center;
 }
 .spinner {
-  background-image: url(../images/fav_icon.svg);
+  background-image: url(/images/fav_icon.svg);
   background-repeat: no-repeat;
   width: 300px;
   height: 300px;
@@ -437,6 +437,48 @@ header {
 #loginPassword {
   margin: 15px 0;
 }
+.modal-footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  backdrop-filter: blur(2px) grayscale(0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  text-align: center;
+}
+.modal-text-footer {
+  background-color: var(--primary-gray);
+  height: auto;
+  width: 80%;
+  color: var(--primary-white);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--shadow);
+}
+.modal-footer span {
+  font-size: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* ================================= ADMIN SECTION ==================================*/
+.flex3 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
 /* ==================================== HERO INDEX PAGE ==================================== */
 .frontpage-hero {
   background-position: top;
@@ -464,13 +506,13 @@ header {
   }
 }
 .hero1 {
-  background-image: url(../images/hero1_optimized.jpg);
+  background-image: url(/images/hero1.jpg);
 }
 .hero2 {
-  background-image: url(../images/dias2_optimized.png);
+  background-image: url(/images/hero2.jpg);
 }
 .hero3 {
-  background-image: url(../images/img_0805_optimized.png);
+  background-image: url(/images/hero3.jpg);
 }
 .hero-wrapper {
   position: relative;
@@ -605,32 +647,32 @@ header {
 .ostanlaegget {
   grid-area: ostanlaegget;
   overflow: hidden;
-  background-image: url(../images/ridekort-til-osteranlaegget_optimized.jpg);
+  background-image: url(/images/ridekort-til-osteranlaegget.jpg);
 }
 .teigar-rideudstyr {
   grid-area: teigar-rideudstyr;
   overflow: hidden;
-  background-image: url(../images/teigar_optimized.png);
+  background-image: url(/images/teigar.jpg);
 }
 .klubdage {
   grid-area: klubdage;
   overflow: hidden;
-  background-image: url(../images/gratis-benyttelse-af-faciliteter_optimized.jpg);
+  background-image: url(/images/gratis-benyttelse-af-faciliteter.jpg);
 }
 .staevner {
   grid-area: staevner;
   overflow: hidden;
-  background-image: url(../images/om-aska-staevner_optimized.jpg);
+  background-image: url(/images/om-aska-staevner.jpg);
 }
 .pet-house {
   grid-area: pet-house;
   overflow: hidden;
-  background-image: url(../images/pethouse_optimized.png);
+  background-image: url(/images/pethouse.jpg);
 }
 .saxild {
   grid-area: saxild;
   overflow: hidden;
-  background-image: url(../images//saxild_naturfoder_optimized.png);
+  background-image: url(/images//saxild_naturfoder.jpg);
 }
 .modal {
   width: 100%;
@@ -753,7 +795,7 @@ header {
 .vilhelmsborg_map {
   grid-column: 1;
   grid-row: 1/5;
-  background-image: url("../images/map.svg");
+  background-image: url("/images/map.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -840,7 +882,7 @@ header {
 
 /* ==================================== SoMe SECTION INDEX PAGE ==================================== */
 .some-section {
-  background-image: url(../images/some-background.jpg);
+  background-image: url(/images/some-background.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -1121,68 +1163,68 @@ header {
 }
 /* ==================================== OM ASKA PAGE ==================================== */
 .om-aska .a {
-  background-image: url(../images/aska-udvalg_optimized.jpg);
+  background-image: url(/images/aska-udvalg.jpg);
   background-position: right;
 }
 .om-aska .b {
-  background-image: url(../images/logo_aska.svg);
+  background-image: url(/images/logo_aska.svg);
 }
 .om-aska .c {
-  background-image: url(../images/hero1_optimized.jpg);
+  background-image: url(/images/hero1.jpg);
 }
 .om-aska .d {
-  background-image: url(../images/aska-vedtaegter_optimized.jpg);
+  background-image: url(/images/aska-vedtaegter.jpg);
   background-position-y: 70%;
 }
 .om-aska .e {
-  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+  background-image: url(/images/bliv-staldambassador.jpg);
 }
 .om-aska .f {
-  background-image: url(../images/aska-værdier_optimized.jpg);
+  background-image: url(/images/aska-vaerdier.jpg);
   background-position-y: 30%;
 }
 .om-aska .g {
-  background-image: url(../images/kontakt_optimized.jpg);
+  background-image: url(/images/kontakt.jpg);
 }
 #calender-modal2 .modal-img {
-  mask-image: url(../images/aska-udvalg_optimized.jpg);
-  background-image: url(../images/aska-udvalg_optimized.jpg);
+  mask-image: url(/images/aska-udvalg.jpg);
+  background-image: url(/images/aska-udvalg.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 65%;
 }
 #calender-modal3 .modal-img {
-  mask-image: url(../images/logo_aska.svg);
-  background-image: url(../images/logo_aska.svg);
+  mask-image: url(/images/logo_aska.svg);
+  background-image: url(/images/logo_aska.svg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 45%;
 }
 #calender-modal4 .modal-img {
-  mask-image: url(../images/hero1_optimized.jpg);
-  background-image: url(../images/hero1_optimized.jpg);
+  mask-image: url(/images/hero1.jpg);
+  background-image: url(/images/hero1.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 35%;
 }
 #calender-modal5 .modal-img {
-  mask-image: url(../images/aska-vedtaegter_optimized.jpg);
-  background-image: url(../images/aska-vedtaegter_optimized.jpg);
+  mask-image: url(/images/aska-vedtaegter.jpg);
+  background-image: url(/images/aska-vedtaegter.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 75%;
 }
 #calender-modal6 .modal-img {
-  mask-image: url(../images/bliv-staldambassador_optimized.jpg);
-  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+  mask-image: url(/images/bliv-staldambassador.jpg);
+  background-image: url(/images/bliv-staldambassador_optimized.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 55%;
 }
 #calender-modal7 .modal-img {
-  mask-image: url(../images/aska-værdier_optimized.jpg);
-  background-image: url(../images/aska-værdier_optimized.jpg);
+  mask-image: url(/images/aska-vaerdier.jpg);
+  background-image: url(/images/aska-vaerdier.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 30%;
 }
 #calender-modal8 .modal-img {
-  mask-image: url(../images/kontakt_optimized.jpg);
-  background-image: url(../images/kontakt_optimized.jpg);
+  mask-image: url(/images/kontakt.jpg);
+  background-image: url(/images/kontakt_optimized.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 65%;
 }
@@ -1209,114 +1251,119 @@ header {
     grid-area: bestyrelses-grid-two;
   }
 }
-/* ==================================== BLIV EN DEL AF ASKA PAGE ==================================== */
+
+/* ==================================== BLIV EN DEL AF ASKA PAGE ====================================*/
 .bliv-en-del-af-aska .a {
-  background-image: url(../images/bliv-medlem_optimized.jpg);
+  background-image: url(/images/bliv-medlem.jpg);
 }
 .bliv-en-del-af-aska .b {
-  background-image: url(../images/aska-medlemmer_optimized.jpg);
+  background-image: url(/images/aska-medlemmer.jpg);
 }
 .bliv-en-del-af-aska .c {
-  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+  background-image: url(/images/bliv-staldambassador.jpg);
 }
 .bliv-en-del-af-aska .d {
-  background-image: url(../images/tilmeld-nyhedsbrev_optimized.jpg);
+  background-image: url(/images/tilmeld-nyhedsbrev.jpg);
 }
 .bliv-en-del-af-aska .e {
-  background-image: url(../images/bliv-frivillig_optimized.jpg);
+  background-image: url(/images/bliv-frivillig.jpg);
 }
 .bliv-en-del-af-aska .f {
-  background-image: url(../images/bliv-sponsor_optimized.jpg);
+  background-image: url(/images/bliv-sponsor.jpg);
 }
 .bliv-en-del-af-aska .g {
-  background-image: url(../images/webshop_optimized.jpg);
+  background-image: url(/images/webshop.jpg);
   background-position-y: 39%;
 }
 #calender-modal9 .modal-img {
-  mask-image: url(../images/bliv-medlem_optimized.jpg);
-  background-image: url(../images/bliv-medlem_optimized.jpg);
+  mask-image: url(/images/bliv-medlem.jpg);
+  background-image: url(/images/bliv-medlem.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 20%;
 }
 #calender-modal10 .modal-img {
-  mask-image: url(../images/aska-medlemmer_optimized.jpg);
-  background-image: url(../images/aska-medlemmer_optimized.jpg);
+  mask-image: url(/images/aska-medlemmer.jpg);
+  background-image: url(/images/aska-medlemmer.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 50%;
 }
 #calender-modal11 .modal-img {
-  mask-image: url(../images/bliv-staldambassador_optimized.jpg);
-  background-image: url(../images/bliv-staldambassador_optimized.jpg);
+  mask-image: url(/images/bliv-staldambassador.jpg);
+  background-image: url(/images/bliv-staldambassador.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 50%;
 }
 #calender-modal12 .modal-img {
-  mask-image: url(../images/tilmeld-nyhedsbrev_optimized.jpg);
-  background-image: url(../images/tilmeld-nyhedsbrev_optimized.jpg);
+  mask-image: url(/images/tilmeld-nyhedsbrev.jpg);
+  background-image: url(/images/tilmeld-nyhedsbrev.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 60%;
 }
 #calender-modal13 .modal-img {
-  mask-image: url(../images/bliv-frivillig_optimized.jpg);
-  background-image: url(../images/bliv-frivillig_optimized.jpg);
+  mask-image: url(/images/bliv-frivillig.jpg);
+  background-image: url(/images/bliv-frivillig.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 55%;
 }
 #calender-modal14 .modal-img {
-  mask-image: url(../images/bliv-sponsor_optimized.jpg);
-  background-image: url(../images/bliv-sponsor_optimized.jpg);
+  mask-image: url(/images/bliv-sponsor.jpg);
+  background-image: url(/images/bliv-sponsor.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 58%;
 }
-/* ==================================== ASKA STAEVNER PAGE ==================================== */
+
+/* ==================================== ASKA STAEVNER PAGE ====================================*/
 .aska-staevner .a {
-  background-image: url(../images/om-aska-staevner_optimized.jpg);
+  background-image: url(/images/om-aska-staevner.jpg);
 }
 .aska-staevner .b {
-  background-image: url(../images/kontakt_staevneudvalg_optimized.jpg);
+  background-image: url(/images/kontakt_staevneudvalg.jpg);
 }
 .aska-staevner .c {
-  background-image: url(../images/);
+  background-image: url(/images/);
 }
 @media screen and (min-width: 600px) {
   .aska-staevner .c {
     height: 130px;
   }
+  .aska-staevner .d {
+    background-position-y: 16%;
+  }
 }
 .aska-staevner .d {
-  background-image: url(../images/staevneudvalg_optimized.jpg);
+  background-image: url(/images/staevneudvalg.jpg);
 }
 .aska-staevner .e {
-  background-image: url(../images/sponsorer_optimized.jpg);
+  background-image: url(/images/sponsorer.jpg);
 }
 .aska-staevner .f {
-  background-image: url(../images/kalender-og-tilmelding_optimized.jpg);
+  background-image: url(/images/kalender-og-tilmelding.jpg);
 }
 .aska-staevner .g {
-  background-image: url(../images/webshop_optimized.jpg);
+  background-image: url(/images/webshop.jpg);
   background-position-y: 39%;
 }
 #calender-modal16 .modal-img {
-  mask-image: url(../images/om-aska-staevner_optimized.jpg);
-  background-image: url(../images/om-aska-staevner_optimized.jpg);
+  mask-image: url(/images/om-aska-staevner.jpg);
+  background-image: url(/images/om-aska-staevner.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 16%;
 }
 #calender-modal17 .modal-img {
-  mask-image: url(../images/kontakt_staevneudvalg_optimized.jpg);
-  background-image: url(../images/kontakt_staevneudvalg_optimized.jpg);
+  mask-image: url(/images/kontakt_staevneudvalg.jpg);
+  background-image: url(/images/kontakt_staevneudvalg.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 49%;
 }
 #calender-modal18 .modal-img {
-  mask-image: url(../images/);
-  background-image: url(../images);
+  mask-image: url(/images/);
+  background-image: url(/images);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 16%;
 }
 #calender-modal19 .modal-img {
-  mask-image: url(../images/staevneudvalg_optimized.jpg);
-  background-image: url(../images/staevneudvalg_optimized.jpg);
+  mask-image: url(/images/staevneudvalg.jpg);
+  background-image: url(/images/staevneudvalg.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 22%;
 }
@@ -1338,65 +1385,67 @@ header {
     display: block;
   }
 }
+
 /* ==================================== ASKA UNGDOM PAGE ==================================== */
 .aska-ungdom .a {
-  background-image: url(../images/bliv-medlem_optimized.jpg);
+  background-image: url(/images/bliv-medlem_ungdom.jpg);
 }
 .aska-ungdom .b {
-  background-image: url(../images/til-foraeldre_optimized.jpg);
+  background-image: url(/images/til-foraeldre.jpg);
 }
 .aska-ungdom .c {
-  background-image: url(../images/om-aska-ungdom_optimized.jpg);
+  background-image: url(/images/om-aska-ungdom.jpg);
 }
 .aska-ungdom .d {
-  background-image: url(../images/undervisning-og-laering_optimized.jpg);
+  background-image: url(/images/undervisning-og-laering.jpg);
 }
 .aska-ungdom .e {
-  background-image: url(../images/faellesskab_optimized.jpg);
+  background-image: url(/images/faellesskab.jpg);
 }
 .aska-ungdom .f {
-  background-image: url(../images/junior-og-ungdomsudvalg_optimized.jpg);
+  background-image: url(/images/junior-og-ungdomsudvalg.jpg);
 }
 .aska-ungdom .g {
-  background-image: url(../images/webshop_optimized.jpg);
+  background-image: url(/images/webshop.jpg);
 }
 #calender-modal23 .modal-img {
-  mask-image: url(../images/bliv-medlem_optimized.jpg);
-  background-image: url(../images/bliv-medlem_optimized.jpg);
+  mask-image: url(/images/bliv-medlem_ungdom.jpg);
+  background-image: url(/images/bliv-medlem_ungdom.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 20%;
 }
 #calender-modal24 .modal-img {
-  mask-image: url(../images/til-foraeldre_optimized.jpg);
-  background-image: url(../images/til-foraeldre_optimized.jpg);
+  mask-image: url(/images/til-foraeldre.jpg);
+  background-image: url(/images/til-foraeldre.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 53%;
 }
 #calender-modal25 .modal-img {
-  mask-image: url(../images/om-aska-ungdom_optimized.jpg);
-  background-image: url(../images/om-aska-ungdom_optimized.jpg);
+  mask-image: url(/images/om-aska-ungdom.jpg);
+  background-image: url(/images/om-aska-ungdom.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 43%;
 }
 #calender-modal26 .modal-img {
-  mask-image: url(../images/undervisning-og-laering_optimized.jpg);
-  background-image: url(../images/undervisning-og-laering_optimized.jpg);
+  mask-image: url(/images/undervisning-og-laering.jpg);
+  background-image: url(/images/undervisning-og-laering.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 43%;
 }
 #calender-modal27 .modal-img {
-  mask-image: url(../images/faellesskab_optimized.jpg);
-  background-image: url(../images/faellesskab_optimized.jpg);
+  mask-image: url(/images/faellesskab.jpg);
+  background-image: url(/images/faellesskab.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 33%;
 }
 #calender-modal28 .modal-img {
-  mask-image: url(../images/junior-og-ungdomsudvalg_optimized.jpg);
-  background-image: url(../images/junior-og-ungdomsudvalg_optimized.jpg);
+  mask-image: url(/images/junior-og-ungdomsudvalg.jpg);
+  background-image: url(/images/junior-og-ungdomsudvalg.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 48%;
 }
-/* ==================================== ASKA TURE PAGE ==================================== */
+
+/* ==================================== ASKA TURE PAGE ====================================*/
 .aska-ture {
   height: 80vh;
 }
@@ -1415,7 +1464,7 @@ header {
   margin-right: 5%;
 }
 .ture-grid-one {
-  background-image: url(../images/20210919_132804_optimized.jpg);
+  background-image: url(/images/om_aska_ture.jpg);
 }
 .ture-grid-two,
 .foredrag-grid-two {
@@ -1424,17 +1473,17 @@ header {
   margin-left: 5%;
 }
 .ture-grid-two {
-  background-image: url(../images/20190422_194258_optimized.jpg);
+  background-image: url(/images/vis_dit_rideterrean.jpg);
 }
 #calender-modal30 .modal-img {
-  mask-image: url(../images/20210919_132804_optimized.jpg);
-  background-image: url(../images/20210919_132804_optimized.jpg);
+  mask-image: url(/images/om_aska_ture.jpg);
+  background-image: url(/images/om_aska_ture.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 53%;
 }
 #calender-modal31 .modal-img {
-  mask-image: url(../images/20190422_194258_optimized.jpg);
-  background-image: url(../images/20190422_194258_optimized.jpg);
+  mask-image: url(/images/vis_dit_rideterrean.jpg);
+  background-image: url(/images/vis_dit_rideterrean.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 46%;
 }
@@ -1450,24 +1499,25 @@ header {
     margin: 0;
   }
 }
-/* ==================================== ASKA FOREFRAG OG KURSUS PAGE ==================================== */
+
+/* ==================================== ASKA FOREFRAG OG KURSUS PAGE ====================================*/
 .foredrag-grid-one {
-  background-image: url(../images/kursus.png);
+  background-image: url(/images/kursus.jpg);
   background-position-y: 70%;
 }
 .foredrag-grid-two {
-  background-image: url(../images/foredrag.png);
+  background-image: url(/images/foredrag.jpg);
   background-position-y: 40%;
 }
 #calender-modal32 .modal-img {
-  mask-image: url(../images/kursus.png);
-  background-image: url(../images/kursus.png);
+  mask-image: url(/images/kursus.jpg);
+  background-image: url(/images/kursus.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 58%;
 }
 #calender-modal33 .modal-img {
-  mask-image: url(../images/foredrag.png);
-  background-image: url(../images/foredrag.png);
+  mask-image: url(/images/foredrag.jpg);
+  background-image: url(/images/foredrag.jpg);
   -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   background-position-y: 35%;
 }
@@ -1516,6 +1566,7 @@ footer {
 .iconify {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 @media screen and (min-width: 600px) {
   .iconify {
@@ -1534,61 +1585,4 @@ footer {
   .text_left_desktop {
     text-align: left;
   }
-}
-/* ==================================== ADMIN LOGIN ==================================== */
-.modal-footer {
-  width: 100%;
-  height: 100%;
-  background-color: var(--overlay);
-  backdrop-filter: blur(2px) grayscale(0.8);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  display: none;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-  text-align: center;
-}
-.modal-text-footer {
-  background-color: var(--primary-gray);
-  height: auto;
-  width: 80%;
-  color: var(--primary-white);
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: var(--shadow);
-}
-.modal-footer span {
-  font-size: 50px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-#firebaseui-auth-container {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.firebaseui-container {
-  background-color: #fff;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  /* -webkit-box-sizing: border-box; */
-  color: rgba(0, 0, 0, 0.87);
-  direction: ltr;
-  font: 16px Roboto, arial, sans-serif;
-  margin: 0 auto;
-  max-width: 360px;
-  overflow: visible;
-  position: relative;
-  text-align: left;
-  width: 100%;
 }

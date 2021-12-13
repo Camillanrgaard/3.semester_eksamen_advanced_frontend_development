@@ -1,13 +1,28 @@
 "use strict";
+
+let initMenu = () => {
+  /**
+   * Toggle menu for mobile devices
+   */
+
+  const burger = document.querySelector(".burger");
+  let navlist = document.querySelector(".nav-list");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+    navlist.classList.toggle("menu-open");
+  });
+};
+
 // Load header og footer ==========================================
 async function loadHeader() {
-  const response = await fetch("../components/header.html");
+  const response = await fetch("./components/header.html");
   const header = await response.text();
   document.querySelector("body").insertAdjacentHTML("afterbegin", header);
+  initMenu();
 }
 
 async function loadFooter() {
-  const response = await fetch("../components/footer.html");
+  const response = await fetch("./components/footer.html");
   const footer = await response.text();
   document.querySelector("body").insertAdjacentHTML("beforeend", footer);
 }
@@ -15,22 +30,10 @@ async function loadFooter() {
 loadHeader();
 loadFooter();
 
-/**
- * Toggle menu for mobile devices
- */
-const burger = document.querySelector(".burger");
-let navlist = document.querySelector(".nav-list");
-
-let toggleMenu = () => {
-  burger.classList.toggle("open");
-  navlist.classList.toggle("menu-open");
-};
-
 // Import Event class functions ==========================================
 import Event from "./event-service.js";
 let _event = new Event();
 
-window.toggleMenu = () => toggleMenu();
 window.search = (value) => _event.search(value);
 window.showDetailView = (id) => _event.showDetailView(id);
 
@@ -38,11 +41,17 @@ window.showDetailView = (id) => _event.showDetailView(id);
 import Sponsor from "./sponsor-service.js";
 let _sponsor = new Sponsor();
 
-//document.querySelector("#btn-create").onclick = () => createSponsor();
 window.previewImage = (file, previewId) => _sponsor.previewImage(file, previewId);
 window.createSponsor = () => _sponsor.createSponsor();
 
+if (document.querySelector("#btn-create")) {
+  document.querySelector("#btn-create").onclick = () => createSponsor();
+}
+
+import { append_edit_sponsors } from "./sponsor-service.js";
+window.append_edit_sponsors = (sponsors) => _sponsor.append_edit_sponsors(sponsors);
 // LOGIN SECTION ==================================================
+import { login } from "./auth-service.js";
 window.login = () => login();
 
 // Hero button section ==================================================
@@ -59,10 +68,13 @@ let slideSections;
 let activeSlide = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-  slideSections = document.querySelectorAll(".frontpage-hero");
-
-  showSlide(0);
-  setInterval(() => setActiveSlide(), 10000);
+  if (document.querySelectorAll(".frontpage-hero")) {
+    slideSections = document.querySelectorAll(".frontpage-hero");
+    if (slideSections.length) {
+      showSlide(0);
+      setInterval(() => setActiveSlide(), 10000);
+    }
+  }
 });
 
 /**
