@@ -423,6 +423,20 @@ header {
 .menu-open {
   display: block;
 }
+/* ================================= LOGIN SECTION ==================================*/
+#firebase-auth-container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#loginPassword {
+  margin: 15px 0;
+}
 /* ==================================== HERO INDEX PAGE ==================================== */
 .frontpage-hero {
   background-position: top;
@@ -977,22 +991,6 @@ header {
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
-.calender-modal-logo {
-  width: 150px;
-  position: relative;
-  position: relative;
-  top: 13%;
-  display: block;
-  z-index: 5342;
-  margin: 0 auto;
-  grid-area: calender-modal-logo;
-}
-@media screen and (min-width: 600px) {
-  .calender-modal-logo {
-    width: 200px;
-    top: 4%;
-  }
-}
 .line5 {
   width: 30%;
   height: 2px;
@@ -1542,6 +1540,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: var(--overlay);
+  backdrop-filter: blur(2px) grayscale(0.8);
   position: fixed;
   top: 0;
   right: 0;
@@ -1569,4 +1568,27 @@ footer {
   font-size: 50px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+#firebaseui-auth-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.firebaseui-container {
+  background-color: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* -webkit-box-sizing: border-box; */
+  color: rgba(0, 0, 0, 0.87);
+  direction: ltr;
+  font: 16px Roboto, arial, sans-serif;
+  margin: 0 auto;
+  max-width: 360px;
+  overflow: visible;
+  position: relative;
+  text-align: left;
+  width: 100%;
 }

@@ -53,9 +53,7 @@ export default class Sponsor {
       let reader = new FileReader();
       reader.onload = (event) => {
         console.log(event);
-        document
-          .querySelector("#" + previewId)
-          .setAttribute("src", event.target.result);
+        document.querySelector("#" + previewId).setAttribute("src", event.target.result);
       };
       reader.readAsDataURL(file);
     }

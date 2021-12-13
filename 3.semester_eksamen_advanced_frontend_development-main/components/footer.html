@@ -28,21 +28,28 @@
                 <a
                     href="https://wondersport.dk/profilshop/aska.html?fbclid=IwAR1_ZgWV__yaSggiRXDUpxJQ_WTyYtMhbWpxqYBJVCeP5nvUFw3OyEjExpU">Bestil klubtøj</a >
             </p>
-            <p>
-                <button
+           <p>
+              
+                   <button
                     class="button5"
                     onclick="document.getElementById('modal32').style.display='block'">
                     <p>For administrator</p>
                 </button>
-                <div id="modal32" class="modal-footer">
+             <div id="modal32" class="modal-footer">
                     <div class="modal-text-footer">
                         <div class="flex2">
                             <span onclick="document.getElementById('modal32').style.display='none'">&times;</span >
                         </div>
                         <h3>Login</h3>
                         <div class="line4"></div>
-                        <p class="modal-text-p">
-                            <section id="firebaseui-auth-container"></section>
+                            <div id="firebase-auth-container"> 
+                                <div class="login-wrapper">
+                                    <input type="email" name="loginEmail" id="loginEmail" placeholder="Email">
+                                    <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
+                                    <button class="loginBtn" onclick="login();">Login</button>
+                                    <p class="login-message"></p>
+                                  </div>
+                            </div>
                         </p>
                     </div>
                 </div>

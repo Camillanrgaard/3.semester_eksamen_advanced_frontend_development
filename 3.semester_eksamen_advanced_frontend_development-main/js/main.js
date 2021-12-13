@@ -38,9 +38,12 @@ window.showDetailView = (id) => _event.showDetailView(id);
 import Sponsor from "./sponsor-service.js";
 let _sponsor = new Sponsor();
 
-document.querySelector("#btn-create").onclick = () => createSponsor();
+//document.querySelector("#btn-create").onclick = () => createSponsor();
 window.previewImage = (file, previewId) => _sponsor.previewImage(file, previewId);
 window.createSponsor = () => _sponsor.createSponsor();
+
+// LOGIN SECTION ==================================================
+window.login = () => login();
 
 // Hero button section ==================================================
 
