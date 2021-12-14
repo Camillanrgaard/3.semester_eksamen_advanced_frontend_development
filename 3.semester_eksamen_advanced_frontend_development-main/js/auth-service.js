@@ -54,3 +54,7 @@ export const logout = () => {
   signOut(auth);
   console.log("Logged out...");
 };
+
+if (auth.currentUser === null && location.pathname.includes("./admin.html")) {
+  location.href = "./index.html";
+}

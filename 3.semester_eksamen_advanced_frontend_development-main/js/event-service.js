@@ -13,10 +13,8 @@ import {
 
 export default class Event {
   constructor() {
-    if (location.pathname.includes("kalender.html")) {
-      this.eventRef = collection(_db, "events");
-      this.readData();
-    }
+    this.eventRef = collection(_db, "events");
+    this.readData();
   }
 
   readData() {
@@ -29,10 +27,11 @@ export default class Event {
         event.id = doc.id;
         return event;
       });
-      this.appendEvents(this.events);
-      this.filterEvents();
-      console.log(this.events);
-      showLoader(false);
+      if (location.pathname.includes("kalender.html")) {
+        this.appendEvents(this.events);
+        this.filterEvents();
+        showLoader(false);
+      }
     });
   }
 

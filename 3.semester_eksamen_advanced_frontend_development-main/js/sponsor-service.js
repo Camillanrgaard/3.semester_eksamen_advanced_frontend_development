@@ -12,14 +12,13 @@ import {
 
 let _selectedImgFile = "";
 let _selectedSponsorId = "";
+//const pathNames = ["index.html", "admin.html"];
 import Glide from "https://cdn.skypack.dev/@glidejs/glide";
 
 export default class Sponsor {
   constructor() {
-    if (location.pathname.includes("index.html" || "admin.html")) {
-      this.sponsorRef = collection(_db, "sponsors");
-      this.readData();
-    }
+    this.sponsorRef = collection(_db, "sponsors");
+    this.readData();
   }
 
   readData() {
@@ -32,9 +31,11 @@ export default class Sponsor {
         sponsor.id = doc.id;
         return sponsor;
       });
-      initSlider(this.sponsors);
-      append_edit_sponsors(this.sponsors);
-      console.log(this.sponsors);
+      if (location.pathname.includes("./index.html")) {
+        initSlider(this.sponsors);
+      } else if (location.pathname.includes("./admin.html")) {
+        append_edit_sponsors(this.sponsors);
+      }
     });
   }
 
@@ -82,9 +83,9 @@ export default class Sponsor {
 
   selectSponsor(id) {
     _selectedSponsorId = id;
-    const user = this.sponsors((sponsor) => sponsor.id == _selectedSponsorId);
+    const sponsor = this.sponsors.find((sponsor) => sponsor.id == _selectedSponsorId);
     // references to the input fields
-    document.querySelector("#imagePreviewUpdate").src = user.img;
+    document.querySelector("#imagePreviewUpdate").src = sponsor.img;
   }
 
   deleteSponsor(id) {
@@ -134,8 +135,9 @@ export let append_edit_sponsors = (sponsors) => {
 		</article>
     `;
   }
-  document.querySelector("#sponsor_edit").innerHTML = htmlTemplate;
-
+  if (document.querySelector("#sponsor_edit")) {
+    document.querySelector("#sponsor_edit").innerHTML = htmlTemplate;
+  }
   //attach events to update and delete btns
   document.querySelectorAll(".btn-update-sponsor").forEach((btn) => {
     btn.onclick = () => selectUser(btn.getAttribute("data-id"));

@@ -49,7 +49,7 @@ if (document.querySelector("#btn-create")) {
 }
 
 import { append_edit_sponsors } from "./sponsor-service.js";
-window.append_edit_sponsors = (sponsors) => _sponsor.append_edit_sponsors(sponsors);
+window.append_edit_sponsors = (sponsors) => append_edit_sponsors(sponsors);
 // LOGIN SECTION ==================================================
 import { login } from "./auth-service.js";
 window.login = () => login();
